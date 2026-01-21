@@ -1,0 +1,29 @@
+set multiplot layout 3,1 title "Temperature Statistics by Century"
+
+# Plot for 19th Century
+set title "Low, High, and Average Temperatures (19th Century)"
+set boxwidth 0.2
+set style fill solid
+
+set xrange [1850:2015]
+set yrange [-10:50]
+
+plot "LandMinTemperatures.txt" using 1:2 with boxes lc rgb "blue" title "Low", \
+     "LandMaxTemperatures.txt" using 1:2 with boxes lc rgb "green" title "High", \
+     "YearlyLandAvgTemperatures.txt" using 1:2 with boxes lc rgb "red" title "Average"
+
+# Plot for 20th Century
+set title "Low, High, and Average Temperatures (20th Century)"
+
+plot "LandMinTemperatures.txt" using 1:2 with boxes lc rgb "blue" title "Low", \
+     "LandMaxTemperatures.txt" using 1:2 with boxes lc rgb "green" title "High", \
+     "YearlyLandAvgTemperatures.txt" using 1:2 with boxes lc rgb "red" title "Average"
+
+# Plot for 21st Century
+set title "Low, High, and Average Temperatures (21st Century)"
+
+plot "LandMinTemperatures.txt" using 1:2 with boxes lc rgb "blue" title "Low", \
+     "LandMaxTemperatures.txt" using 1:2 with boxes lc rgb "green" title "High", \
+     "YearlyLandAvgTemperatures.txt" using 1:2 with boxes lc rgb "red" title "Average"
+
+unset multiplot

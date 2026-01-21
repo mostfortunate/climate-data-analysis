@@ -1,0 +1,13 @@
+# Set the plot title and labels
+set title "Average Land Temperature Uncertainty by Month (2000-2015)"
+set xlabel "Year"
+set ylabel "Uncertainty (°C)"
+
+set xrange [2000:2015]
+set yrange [-1:1]
+
+# Define the plot style for error bars
+set style data errorbars
+
+# Plot the data from the provided text file
+plot "LandAverageTemperaturesUncertainty.txt" using ($0+1):2:2 with yerrorbars title "Uncertainty"

@@ -1,0 +1,16 @@
+# Set title and labels
+set title 'Average Land Temperatures (19th and 20th Centuries)'
+set xlabel 'Year'
+set ylabel 'Average Temperature (°C)'
+
+# Set axis range
+set xrange [1800:2000]
+set yrange [0:10]
+
+# Define line styles and colors
+set style line 1 lt 1 lw 2 lc rgb 'blue' # 19th century
+set style line 2 lt 1 lw 2 lc rgb 'red' # 20th century
+
+# Plot data from the file with legend for the specified ranges
+plot 'YearlyLandAvgTemperatures.txt' using 1:($1 >= 1800 && $1 <= 1899 ? $2 : 1/0) with lines linestyle 1 title '19th Century', \
+     '' using 1:($1 >= 1900 && $1 <= 1999 ? $2 : 1/0) with lines linestyle 2 title '20th Century'

@@ -1,0 +1,11 @@
+# Set plot title and labels
+set title "Land and Ocean Average Temperatures (1850-2015)"
+set xlabel "Year"
+set ylabel "Temperature (°C)"
+
+set xrange[1850:2015]
+set yrange[0:20]
+
+# Plot the data from the provided text file
+plot "LandAndOceanAverageTemperatures.txt" using 1:2 with lines lw 2 title "Land Average Temperature", \
+     '' using 1:3 with lines lw 2 title "Land and Ocean Average Temperature"

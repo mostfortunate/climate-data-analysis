@@ -1,0 +1,15 @@
+set title "Average Temperatures, Min Temperatures, Max Temperatures (1850-2015)"
+set xlabel "Year"
+set ylabel "Temperature (°C)"
+
+set xrange [1850:2015]
+set yrange [-10:30]
+
+# Define line styles and colors
+set style line 1 lc rgb '#0066CC' lw 3
+set style line 2 lc rgb '#FF6600' lw 2
+set style line 3 lc rgb '#33CC33' lw 2
+
+plot "YearlyLandAvgTemperatures.txt" using 1:2 with lines linestyle 1 title "LandAverageTemperature", \
+     "LandMaxTemperatures.txt" using 1:2 with lines linestyle 2 title "LandMaxTemperature", \
+     "LandMinTemperatures.txt" using 1:2 with lines linestyle 3 title "LandMinTemperature"

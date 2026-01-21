@@ -1,0 +1,20 @@
+# Set the title of the graph
+set title 'Yearly Average Temperature (1760 - 2015)'
+
+# Set the labels for the x and y axes
+set xlabel 'Year'
+set ylabel 'Average Temperature (°C)'
+
+# Set the range for the x and y axes
+set xrange [1760:2015]
+set yrange [5:10]
+
+# Enable gridlines
+set grid
+
+set style line 1 lc rgb '#0072bd' lw 2 # blue
+set style line 2 lc rgb '#d95319' lw 2 # orange
+set style line 3 lc rgb '#edb120' lw 2 # yellow
+
+# Plot the data from the data file with specified line style and title for the legend
+plot 'YearlyLandAvgTemperatures.txt' using 1:2 with lines ls 1 title 'Average Temperature'

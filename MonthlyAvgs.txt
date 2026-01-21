@@ -1,0 +1,12 @@
+January 2.815035
+February 3.330681
+March 5.395672
+April 8.536757
+May 11.394818
+June 13.540051
+July 14.449054
+August 13.958490
+September 12.166732
+October 9.527080
+November 6.223164
+December 3.811914
